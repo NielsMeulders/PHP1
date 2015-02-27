@@ -19,7 +19,7 @@
 		<?php for ($i=0; $i < count($users); $i++) {?>
 		<li>
 			<a href="profile.php?id=<?php echo $i ?>">
-			<img src="<?php echo $users[$i]['picture'] ?>" alt="">
+			<img src="<?php echo $users[$i]['picture'] ?>" alt="<?php echo $users[$i]['name'] ?>">
 			</a>
 		</li>
 		<?php } ?>
