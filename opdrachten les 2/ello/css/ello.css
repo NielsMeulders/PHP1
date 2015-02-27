@@ -1,0 +1,106 @@
+body
+{
+	margin: 0;
+	font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+}
+
+.users_container
+{
+	background-color: #040404;
+}
+
+.clearfix
+{
+	clear: both;
+}
+
+.users
+{
+	list-style-type: none;
+	margin: 0;
+	padding-top: 4em;
+	transition: translate 0.5s ease-out;
+}
+
+.users li
+{
+	float: left;
+	padding: 1.5em;
+	box-sizing: border-box;
+}
+
+.users img
+{
+	border-radius: 50%;
+	transition: transform 0.1s;
+}
+
+.users img:hover
+{	
+	transform: scale(1.1);
+}
+
+.profile_details
+{
+	padding: 2em;
+}
+
+.profile img
+{
+	border-radius: 50%;
+}
+
+.profile h1
+{
+	font-family: "AtlasGroteskBold", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+
+.profile p
+{
+	font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+	font-size: 0.8em;
+}
+
+nav
+{
+	background-color: #333333;
+	padding: 2em;
+}
+
+.input, .button
+{
+	font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+}
+
+.input
+{
+	background-color: #C5C5C5;
+	padding: 1em;
+	color: #040404;
+	border: 1px solid #040404;
+	font-size: 1.4em;
+}
+
+.button
+{
+	background-color: #040404;
+	color: white;
+	border: 1px solid #040404;
+	font-size: 1.4em;
+	padding: 1em;
+}
+
+p.welcome
+{
+	color: white;
+}
+
+p.welcome a
+{
+	color: #C5C5C5;
+}
+
+p.error
+{
+	color: orange;
+}
