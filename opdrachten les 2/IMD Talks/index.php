@@ -1,13 +1,23 @@
 <?php 
-
+	
+	session_start();
 	if (isset($_POST['btnSignup'])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 
-		session_start();
 		$account = [$name,$email,$password];
 		$_SESSION['user'] = $account;
+	}
+
+	if (isset($_POST['btnLogin'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		if ($_SESSION['user'][1] == $username && $_SESSION['user'][2] == $password) {
+			
+			$_SESSION['loggedin'] = 1;
+
+		}
 	}
 
 
@@ -39,18 +49,26 @@
 	<div id="rightside">
 
 	<?php if (isset($_SESSION['user'])): ?>
+	
+		<?php if (isset($_SESSION['loggedin'])): ?>
 
-	<section id="login">
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-		<input type="text" name="username" placeholder="Email" />
-		<input type="password" name="password" placeholder="Password" />
-		<input type="checkbox" name="rememberme" value="yes" id="rememberme">
-		<label for="rememberme">Remember me</label>
+		<div class="feedback">Welcome <?php echo $_SESSION['user'][0] ?></div>
 
-		<input type="submit" name="btnLogin" value="Sign in" />
-		</form>
+		<?php else: ?>
 		
-	</section>	
+		<section id="login">
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<input type="text" name="username" placeholder="Email" />
+			<input type="password" name="password" placeholder="Password" />
+			<input type="checkbox" name="rememberme" value="yes" id="rememberme">
+			<label for="rememberme">Remember me</label>
+
+			<input type="submit" name="btnLogin" value="Sign in" />
+			</form>
+			
+		</section>
+
+		<?php endif ?>
 
 	<?php else: ?>
 	
