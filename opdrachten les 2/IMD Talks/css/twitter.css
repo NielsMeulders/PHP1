@@ -27,6 +27,17 @@ html{ width: 100%; height: 100%; }
 		margin-top: 30px;
 	}
 
+	.feedback
+	{
+		margin-top: 150px;
+		font-size: 1.5em;
+		background-color: rgba(255, 255, 255, 0.9);
+		color: #333;
+		display: inline-block;
+		padding: 20px;
+		border-radius: 10px;
+	}
+
 	#rightside{ width: 40%;	padding: 10px 0; float: left; margin-top: 60px;}
 	#signup h2{ font-weight: normal; font-size: 18px; border-bottom: 1px solid #e2e2e2; }
 	#signup input, #login input{ display: block; width: 70%; margin-bottom: 10px; border-radius:5px; border: 1px solid #cccccc; padding: 5px; }

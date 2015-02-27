@@ -18,6 +18,10 @@
 			$_SESSION['loggedin'] = 1;
 
 		}
+		else
+		{
+			$feedback = "Wrong combination!";
+		}
 	}
 
 
@@ -52,11 +56,12 @@
 	
 		<?php if (isset($_SESSION['loggedin'])): ?>
 
-		<div class="feedback">Welcome <?php echo $_SESSION['user'][0] ?></div>
+		<div class="feedback">Welcome back <?php echo $_SESSION['user'][0] ?></div>
 
 		<?php else: ?>
 		
 		<section id="login">
+			<?php if (isset($feedback)): echo $feedback; endif?>
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<input type="text" name="username" placeholder="Email" />
 			<input type="password" name="password" placeholder="Password" />

@@ -1,5 +1,5 @@
 <?php
 	session_start();
-	session_destroy();
-	header('Location: twitter.php');
+	unset($_SESSION['loggedin']);
+	header('Location: index.php');
 ?>
