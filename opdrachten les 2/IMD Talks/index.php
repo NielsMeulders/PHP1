@@ -7,7 +7,7 @@
 
 		session_start();
 		$account = [$name,$email,$password];
-		$SESSION['account'] = $account;
+		$_SESSION['user'] = $account;
 	}
 
 
@@ -36,7 +36,10 @@
 		<h2>Find out what other IMD'ers are building around you.</h2>
 	</header>
 	
-	<div id="rightside">	
+	<div id="rightside">
+
+	<?php if (isset($_SESSION['user'])): ?>
+
 	<section id="login">
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 		<input type="text" name="username" placeholder="Email" />
@@ -48,6 +51,8 @@
 		</form>
 		
 	</section>	
+
+	<?php else: ?>
 	
 	<section id="signup">
 	
@@ -60,6 +65,8 @@
 		</form>
 		
 	</section>
+
+	<?php endif ?>
 	</div>	
 	
 </body>
