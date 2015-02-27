@@ -1,3 +1,18 @@
+<?php 
+
+	if (isset($_POST['btnSignup'])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+
+		session_start();
+		$account = [$name,$email,$password];
+		$SESSION['account'] = $account;
+	}
+
+
+ ?>
+
 <!doctype html>
 <html lang="en">
 <head>
