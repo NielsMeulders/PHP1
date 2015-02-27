@@ -16,13 +16,14 @@
 	<div class="users_container">
 	<ul class="users">
 		
-		<!--
+		<?php for ($i=0; $i < count($users); $i++) {?>
 		<li>
-			<a href="profile.php?id=1">
-			<img src="" alt="">
+			<a href="profile.php?id=<?php echo $i ?>">
+			<img src="<?php echo $users[$i]['picture'] ?>" alt="">
 			</a>
 		</li>
-		-->
+		<?php } ?>
+		
 		
 	</ul>
 	<br class="clearfix">
