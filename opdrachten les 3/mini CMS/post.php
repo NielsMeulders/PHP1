@@ -30,6 +30,8 @@
         <label for="article">Article:</label>
         <textarea name="article" id="article" cols="30" rows="10"></textarea>
 
+        <button id="button_send">Send!</button>
+
     </form>
 
 </body>
