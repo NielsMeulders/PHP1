@@ -4,6 +4,7 @@ body
     font-family: 'Roboto';
     font-weight: 100;
     color: white;
+    font-size: 1.2em;
 }
 
 .screen
@@ -41,4 +42,19 @@ body
 .clearfix
 {
     clear: both;
+}
+
+input, textarea
+{
+    width: 320px;
+    height: 30px;
+    border: none;
+    font-size: 0.8em;
+}
+
+textarea
+{
+    height: 200px;
+    max-width: 320px;
+    max-height: 200px;
 }

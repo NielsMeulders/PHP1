@@ -41,11 +41,11 @@
 
         <form action="" method="post">
 
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title"/>
+            <p><label for="title">Title:</label></p>
+            <p><input type="text" id="title" name="title" placeholder="Title here"/></p>
 
-            <label for="article">Article:</label>
-            <textarea name="article" id="article" cols="30" rows="10"></textarea>
+            <p><label for="article">Article:</label></p>
+            <p><textarea name="article" id="article" cols="30" rows="10" placeholder="Write your article here"></textarea></p>
 
             <button id="button_send">Send!</button>
 
