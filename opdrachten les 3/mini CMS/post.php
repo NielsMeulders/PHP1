@@ -28,6 +28,7 @@
     <meta charset="UTF-8">
     <title>Post - My CMS</title>
     <link rel="stylesheet" href="style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -35,7 +36,8 @@
 
         <a href="index.php" class="button">Go back!</a>
 
-        <div class="feedback"><?php if(isset($feedback)){echo $feedback;} ?></div>
+        <?php if(isset($feedback)){echo '<div class="feedback">'.$feedback.'</div>';} ?>
+
 
         <form action="" method="post">
 

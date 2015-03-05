@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <title>My CMS</title>
     <link rel="stylesheet" href="style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
