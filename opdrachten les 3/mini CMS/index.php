@@ -23,9 +23,8 @@
         <a href="post.php" class="button">Post article</a>
 
         <?php
-        if(isset($result))
+        if($statement->rowCount()>0)
         {
-
         while($result = $statement->fetch(PDO::FETCH_ASSOC)){ ?>
         <h1><?php echo $result['title']; ?></h1><h2 class="date_header"><?php echo $result['date']; ?></h2>
 

@@ -58,3 +58,25 @@ textarea
     max-width: 320px;
     max-height: 200px;
 }
+
+#button_send
+{
+    background-color: #C1CFD9;
+    border: none;
+    color: white;
+    font-size: 0.7em;
+    background-image: url("http://cdn.flaticon.com/png/256/19973.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    text-indent: -99999px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color .5s;
+}
+
+#button_send:hover
+{
+    background-color: white;
+}
