@@ -1,8 +1,10 @@
-<php>
+<?php
 
+    $conn = new PDO('mysql:host=localhost;dbname=phples', "root", "root");
+    // INSERT
+    $statement = $conn->prepare("INSERT INTO cms (title, date, article) VALUES ( :title, :date, :article )");
 
-
-</php>
+?>
 
 <!doctype html>
 <html lang="nl">
