@@ -17,16 +17,26 @@
 </head>
 <body>
 
-<a href="post.php">Post article</a>
+    <div class="screen">
 
-<div class="screen">
+        <a href="post.php" class="button">Post article</a>
 
-    <?php while($result = $statement->fetch(PDO::FETCH_ASSOC)){ ?>
-    <h1><?php echo $result['title']; ?></h1><h2 class="date_header"><?php echo $result['date']; ?></h2>
+        <?php
+        if(isset($result))
+        {
 
-    <p><?php echo $result['article']; ?></p>
-    <?php } ?>
-</div>
+        while($result = $statement->fetch(PDO::FETCH_ASSOC)){ ?>
+        <h1><?php echo $result['title']; ?></h1><h2 class="date_header"><?php echo $result['date']; ?></h2>
+
+        <p><?php echo $result['article']; ?></p>
+
+    <?php }}
+        else
+        { ?>
+            <div class="clearfix"></div>
+            <p class="feedback">There are no posts yet!</p>
+        <?php }?>
+    </div>
 
 </body>
 </html>

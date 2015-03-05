@@ -27,24 +27,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Post - My CMS</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <a href="index.php">Go back!</a>
+    <div class="screen">
 
-    <div class="feedback"><?php if(isset($feedback)){echo $feedback;} ?></div>
+        <a href="index.php" class="button">Go back!</a>
 
-    <form action="" method="post">
+        <div class="feedback"><?php if(isset($feedback)){echo $feedback;} ?></div>
 
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title"/>
+        <form action="" method="post">
 
-        <label for="article">Article:</label>
-        <textarea name="article" id="article" cols="30" rows="10"></textarea>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title"/>
 
-        <button id="button_send">Send!</button>
+            <label for="article">Article:</label>
+            <textarea name="article" id="article" cols="30" rows="10"></textarea>
 
-    </form>
+            <button id="button_send">Send!</button>
+
+        </form>
+
+    </div>
 
 </body>
 </html>

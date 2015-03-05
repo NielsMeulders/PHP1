@@ -1,0 +1,37 @@
+body
+{
+    background-color: #F2F2F2;
+}
+
+.screen
+{
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C1CFD9;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.button:link,
+.button:visited,
+.button:hover,
+.button:active
+{
+    color: white;
+    background-color: #2E3641;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.feedback
+{
+    background-color: #9EB2C0;
+    display: inline;
+    
+}
+
+.clearfix
+{
+    clear: both;
+}
