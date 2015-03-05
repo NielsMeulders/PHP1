@@ -26,11 +26,14 @@
         if($statement->rowCount()>0)
         {
         while($result = $statement->fetch(PDO::FETCH_ASSOC)){ ?>
-        <h1><?php echo $result['title']; ?></h1><h2 class="date_header"><?php echo $result['date']; ?></h2>
 
-        <p><?php echo $result['article']; ?></p>
+            <div class="post">
+                <h1><?php echo $result['title']; ?></h1><h2 class="date_header"><?php echo $result['date']; ?></h2>
 
-    <?php }}
+                <p><?php echo $result['article']; ?></p>
+            </div>
+
+        <?php }}
         else
         { ?>
             <div class="clearfix"></div>

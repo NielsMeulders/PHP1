@@ -13,7 +13,7 @@ body
     margin-left: auto;
     margin-right: auto;
     background-color: #C1CFD9;
-    padding: 10px 20px;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -28,6 +28,7 @@ body
     padding: 10px 20px;
     width: 100px;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .feedback
@@ -44,12 +45,18 @@ body
     clear: both;
 }
 
+form
+{
+    padding-bottom: 20px;
+}
+
 input, textarea
 {
     width: 320px;
     height: 30px;
     border: none;
     font-size: 0.8em;
+    padding: 5px;
 }
 
 textarea
@@ -79,4 +86,24 @@ textarea
 #button_send:hover
 {
     background-color: white;
+}
+
+.date_header
+{
+    font-size: 0.8em;
+    margin-top: -15px;
+}
+
+.post
+{
+    border-top: 20px solid #F2F2F2;
+    padding-bottom: 5px;
+}
+
+.post p
+{
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: left;
 }
