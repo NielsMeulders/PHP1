@@ -42,10 +42,19 @@ body
 
 #feedback_form
 {
-    background-color: #F97E76;
     padding-bottom: 10px;
     padding-top: 10px;
     transition: background-color .7s ease-in;
+}
+
+.green
+{
+    background-color: #2ecc71;
+}
+
+.red
+{
+    background-color: #F97E76;
 }
 
 .clearfix

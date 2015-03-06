@@ -5,6 +5,7 @@
         if (empty($_POST['title']) && empty($_POST['article']))
         {
             $feedback = "Fill in all the fields";
+            $success_feedback = false;
         }
         else
         {
@@ -22,6 +23,7 @@
             $statement->execute();
 
             $feedback = "Your article is posted!";
+            $success_feedback = true;
         }
 
     }
@@ -44,7 +46,17 @@
 
         <a href="index.php" class="button">Go back!</a>
 
-        <?php if(isset($feedback)){echo '<p id="feedback_form">'.$feedback.'</p>';} ?>
+        <?php if(isset($feedback)){
+            if ($success_feedback)
+            {
+                echo '<p id="feedback_form" class="green">'.$feedback.'</p>';
+            }
+            else
+            {
+                echo '<p id="feedback_form" class="red">'.$feedback.'</p>';
+            }
+
+        } ?>
 
 
         <form action="" method="post">
