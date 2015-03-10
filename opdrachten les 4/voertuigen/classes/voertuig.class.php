@@ -44,7 +44,15 @@
 
         public function Reserveer()
         {
+            $today = date("H");
+            if ($today <= 12)
+            {
 
+            }
+            else
+            {
+                throw new Exception("U kan maar reserveren tot 12u");
+            }
         }
 
 

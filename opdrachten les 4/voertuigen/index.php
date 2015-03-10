@@ -9,6 +9,7 @@
         $s->Merk = "Renault";
         $s->AantalPassagiers = 5;
         $s->AantalDeuren = 5;
+        $s->Reserveer();
 
         echo $s;
     }
@@ -24,11 +25,11 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>voertuigen</title>
+    <title>Voertuigen</title>
 </head>
 <body>
 
-
+    <p><?PHP echo $error; ?></p>
 
 </body>
 </html>
