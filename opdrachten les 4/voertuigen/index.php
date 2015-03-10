@@ -29,7 +29,7 @@
 </head>
 <body>
 
-    <p><?PHP echo $error; ?></p>
+    <p id="errors"><?PHP echo $error; ?></p>
 
 </body>
 </html>

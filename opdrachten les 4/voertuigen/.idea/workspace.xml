@@ -28,12 +28,12 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="615">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.2682927" vertical-offset="0" max-vertical-offset="615">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding>
-                <marker date="1425993875000" expanded="true" signature="418:548" placeholder="..." />
-                <marker date="1425993875000" expanded="true" signature="425:490" placeholder="..." />
-                <marker date="1425993875000" expanded="true" signature="497:540" placeholder="..." />
+                <marker date="1425994128000" expanded="true" signature="418:560" placeholder="..." />
+                <marker date="1425994128000" expanded="true" signature="425:490" placeholder="..." />
+                <marker date="1425994128000" expanded="true" signature="497:552" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -259,12 +259,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="615">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.2682927" vertical-offset="0" max-vertical-offset="615">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
-            <marker date="1425993875000" expanded="true" signature="418:548" placeholder="..." />
-            <marker date="1425993875000" expanded="true" signature="425:490" placeholder="..." />
-            <marker date="1425993875000" expanded="true" signature="497:540" placeholder="..." />
+            <marker date="1425994128000" expanded="true" signature="418:560" placeholder="..." />
+            <marker date="1425994128000" expanded="true" signature="425:490" placeholder="..." />
+            <marker date="1425994128000" expanded="true" signature="497:552" placeholder="..." />
           </folding>
         </state>
       </provider>
