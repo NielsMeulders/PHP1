@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Klavika';
+    src: url('../klavika.otf');
+}
+
 body
 {
     font-family: 'Roboto','Calibri';
@@ -26,6 +31,7 @@ textarea
     height: 150px;
     padding: 10px;
     max-width: 380px;
+    font-size: 1em;
 }
 
 .center
@@ -34,6 +40,14 @@ textarea
     margin-right: auto;
     display: block;
     width: 400px;
+}
+
+#logo
+{
+    text-align: center;
+    font-size: 3em;
+    color: #3B579D;
+    font-family: 'Klavika';
 }
 
 #post_btn
@@ -52,8 +66,17 @@ textarea
 {
     width: 400px;
     text-align: center;
-    background-color: #e74c3c;
     -webkit-animation: feedbackIn 1s
+}
+
+.red
+{
+    background-color: #e74c3c;
+}
+
+.green
+{
+    background-color: #2ecc71;
 }
 
 @-webkit-keyframes feedbackIn

@@ -12,6 +12,8 @@
             $p->User = "Niels Meulders";
 
             $p->save();
+            $feedback = "Je post is succesvol gepost!";
+
         }
         catch( Exception $e)
         {
@@ -36,15 +38,23 @@
 
     <div class="screen">
 
-        <div class="feedback <?php  ?> ">
+        <p id="logo">Postboek</p>
+
+        <div class="feedback red ">
             <?php if(isset($error)): ?>
             <p><?php echo $error; ?></p>
             <?php endif; ?>
         </div>
 
+        <div class="feedback  green">
+            <?php if(isset($feedback)): ?>
+                <p><?php echo $feedback; ?></p>
+            <?php endif; ?>
+        </div>
+
         <form action="" method="post">
 
-            <p class="center"><textarea type="text" id="post" name="post"/></textarea></p>
+            <p class="center"><textarea type="text" id="post" name="post"></textarea></p>
 
             <button id="post_btn">Post!</button>
 
