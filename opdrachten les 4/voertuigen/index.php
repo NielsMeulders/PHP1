@@ -25,7 +25,7 @@
             $v->AantalPassagiers = $_POST['aantal_passagiers'];
             $v->AantalDeuren = $_POST['aantal_deuren'];
 
-            echo $v;
+            $v->Save();
         }
         catch (Exception $e)
         {
