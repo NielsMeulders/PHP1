@@ -16,6 +16,7 @@
         {
             $error = $e->getMessage();
         }
+        header('location:index.php');
 
     }
 
