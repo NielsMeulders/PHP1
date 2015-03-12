@@ -1,4 +1,31 @@
-<?php 
+<?php
+
+    include_once("classes/Booking.class.php");
+    $b = new Booking();
+    $allBookings = $b->getAll();
+
+    if(!empty($_POST))
+    {
+        try
+        {
+            $b->FirstName = $_POST['firstname'];
+            $b->LastName = $_POST['lastname'];
+            $b->Hotel = $_POST['hotel'];
+            $b->CheckinDay = $_POST['checkinday'];
+            $b->CheckinMonth = $_POST['checkinmonth'];
+            $b->CheckoutDay = $_POST['checkoutday'];
+            $b->CheckoutMonth = $_POST['checkoutmonth'];
+
+            $b->Save();
+        }
+        catch( Exception $e)
+        {
+            $error = $e->getMessage();
+        }
+
+    }
+
+
 	
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +37,13 @@
 </head>
 <body>
 <div>
+
+    <?php if (isset($error)): ?>
+    <div class="error">
+        <?PHP echo $error; ?>
+    </div>
+    <?php endif; ?>
+
 	<div class="feedback">Gelieve alle velden in te vullen</div>
 
 	<form method="post" action="">
@@ -86,6 +120,17 @@
 		
 		</fieldset>
 	</form>
+
+    <?php
+
+    while($row = $allBookings->fetch(PDO::FETCH_ASSOC)) {
+
+        echo "Who: " . $row['booking_first_name'] . "<br>";
+
+    }
+
+    ?>
+
 </div>
 </body>
 </html>

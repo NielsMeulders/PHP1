@@ -18,6 +18,21 @@ div.feedback
 	text-shadow: 1px 0px 0px #25689a;
 }
 
+.error
+{
+    width: 600px;
+    margin: 25px auto;
+    background-color: #c0392b;
+    color: #fff;
+    padding: 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #25689a;
+    font-weight: bold;
+    text-shadow: 1px 0px 0px #25689a;
+}
+
 
 fieldset
 {
