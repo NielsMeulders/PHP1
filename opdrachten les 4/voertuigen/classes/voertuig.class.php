@@ -42,6 +42,12 @@
             }
         }
 
+        public function __toString()
+        {
+            $ret = $this->Merk . " heeft " . $this->AantalDeuren . " deuren en kan " . $this->AantalPassagiers . " passagiers vervoeren.";
+            return $ret;
+        }
+
         public function Reserveer()
         {
             $today = date("H");

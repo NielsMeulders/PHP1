@@ -6,12 +6,6 @@
     {
         private $m_bStereoInstallatie;
 
-        public function __toString()
-        {
-            $ret = $this->Merk . " heeft " . $this->AantalDeuren . " deuren en kan " . $this->AantalPassagiers . " passagiers vervoeren.";
-            return $ret;
-        }
-
     }
 
 ?>
