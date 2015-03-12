@@ -30,6 +30,7 @@
     <title>Facebook</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -53,7 +54,7 @@
 
         while($row = $allposts->fetch(PDO::FETCH_ASSOC)) {
 
-            echo $row['username'] .": " . $row['text'] . "<br>";
+            echo "<p class='post'><span class='author'>" . $row['username'] .":</span><br>" . $row['text'] . "</p>";
 
         }
 
