@@ -9,6 +9,7 @@
         try
         {
             $p->Text = $_POST['post'];
+            $p->User = "Niels Meulders";
 
             $p->save();
         }
@@ -24,31 +25,40 @@
 
 
 <!doctype html>
-<html lang="nl">
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Facebook</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-    <form action="" method="post">
+    <div class="screen">
 
-        <label for="post">Post: </label>
-        <input type="text" id="post" name="post"/>
+        <?php if(isset($error)): ?>
+        <div class="error"></div>
+        <?php endif; ?>
 
-        <button>Post!</button>
+        <form action="" method="post">
 
-    </form>
+            <p class="center"><textarea type="text" id="post" name="post"/></textarea></p>
 
-    <?php
+            <button id="post_btn">Post!</button>
 
-    while($row = $allposts->fetch(PDO::FETCH_ASSOC)) {
+        </form>
 
-        echo $row['text'] . "<br>";
+        <?php
 
-    }
+        while($row = $allposts->fetch(PDO::FETCH_ASSOC)) {
 
-    ?>
+            echo $row['username'] .": " . $row['text'] . "<br>";
+
+        }
+
+        ?>
+
+    </div>
 
 </body>
 </html>
