@@ -17,7 +17,6 @@
         {
             $error = $e->getMessage();
         }
-        header('location:index.php');
 
     }
 
@@ -36,9 +35,11 @@
 
     <div class="screen">
 
-        <?php if(isset($error)): ?>
-        <div class="error"></div>
-        <?php endif; ?>
+        <div class="feedback <?php  ?> ">
+            <?php if(isset($error)): ?>
+            <p><?php echo $error; ?></p>
+            <?php endif; ?>
+        </div>
 
         <form action="" method="post">
 
