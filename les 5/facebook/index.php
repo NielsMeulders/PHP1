@@ -56,7 +56,7 @@
 
             <p class="center"><textarea type="text" id="post" name="post"></textarea></p>
 
-            <button id="post_btn">Post!</button>
+            <button id="post_btn">Share!</button>
 
         </form>
 
