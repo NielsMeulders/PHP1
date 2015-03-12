@@ -57,7 +57,7 @@
         public function getAll()
         {
             $conn = Db::getInstance();
-            $allposts = $conn->query("SELECT * FROM tblpost");
+            $allposts = $conn->query("SELECT * FROM tblpost ORDER BY id DESC");
             return $allposts;
         }
 
