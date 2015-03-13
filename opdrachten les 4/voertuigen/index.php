@@ -5,6 +5,7 @@
             include_once("classes/".$class.".class.php");
         });
 
+        $v = new sportwagen();
 
         $v->Merk = "Mercedes";
         $v->AantalPassagiers = 2;

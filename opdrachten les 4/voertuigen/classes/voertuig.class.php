@@ -15,12 +15,25 @@
                     break;
 
                 case "AantalPassagiers":
-
-                    $this->m_iAantalPassagiers = $p_vValue;
+                    if ($p_vValue <= 6 && $p_vValue >=1)
+                    {
+                        $this->m_iAantalPassagiers = $p_vValue;
+                    }
+                    else
+                    {
+                        throw new Exception("Aantal passagiers kan niet " . $p_vValue . " zijn!");
+                    }
                     break;
 
                 case "AantalDeuren":
-                    $this->m_iAantalDeuren = $p_vValue;
+                    if ($p_vValue <= 5 && $p_vValue >= 2)
+                    {
+                        $this->m_iAantalDeuren = $p_vValue;
+                    }
+                    else
+                    {
+                        throw new Exception("Aantal deuren kan niet " . $p_vValue . " zijn!");
+                    }
                     break;
             }
         }
@@ -54,7 +67,11 @@
             $today = date("H");
             if ($today > 12)
             {
-                echo $this;
+                $feedback =     "Reservatie voor: <br>
+                                Merk: " . $this->Merk . "<br>
+                                Aantal passagiers: " . $this->AantalPassagiers . "<br>
+                                Aantal deuren: " . $this->AantalDeuren;
+                echo $feedback;
             }
             else
             {
