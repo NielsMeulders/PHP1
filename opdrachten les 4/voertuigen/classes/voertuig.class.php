@@ -65,7 +65,7 @@
         public function Reserveer()
         {
             $today = date("H");
-            if ($today > 12)
+            if ($today < 12)
             {
                 $feedback =     "Reservatie voor: <br>
                                 Merk: " . $this->Merk . "<br>
@@ -75,7 +75,7 @@
             }
             else
             {
-                throw new Exception("U kan maar reserveren tot 12u");
+                throw new Exception("U kan maar reserveren tot 12u!");
             }
         }
 
