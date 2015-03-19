@@ -1,0 +1,16 @@
+html, body {
+		background: #fefefe;
+	}
+
+	h1, h2 {
+		font: bold italic 100px georgia, times new roman, serif;
+		color: #555;
+		letter-spacing: -.09em;
+		-webkit-transition-duration: 1s;
+	}
+
+	h2  {
+		font-size: 21px;
+		font-weight: normal;
+		line-height: 1.6;
+	}

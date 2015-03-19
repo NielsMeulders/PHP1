@@ -97,12 +97,8 @@ div.feedback
 }	
 </style>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	
-});
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 </head>
 <body>
 <?php if (isset($feedback)): ?>
@@ -125,11 +121,47 @@ $(document).ready(function(){
 			
 			<br />
 			
-			<input class="submit" type="submit" value="Create my account" />
+			<input class="submit" id="submit" type="submit" value="Create my account" />
 		</div>
 		</form>
 	</div>
 
 </div>
+
+<script>
+
+    $(document).ready(function(){
+        // 1 - click op button
+        $("#submit").on("click", function(e){
+            // 2 - value uit form lezen
+            var text = $("#username").val();
+            console.log(text);
+            // 3 - AJAX call richting ajax/save_activity.php
+            $.ajax({
+                method: "POST",
+                url: "ajax/check_username.php",
+                data: { 'text' : text }
+            })
+                .done(function( resp ) {
+                    //alert( "Data Saved: " + resp );
+                    //console.log(resp);
+                    if(resp.status === "success")
+                    {
+                        // 4 - indien success> slideDown()
+                        //var li = $("<li></li>").html("<h2>GoodBytes.be</h2> "+ resp.text).css("display","none");
+                        //$("#listupdates").prepend(li);
+                        //li.slideDown("fast");
+
+                        //$("#listupdates li").last().slideUp("fast", function(){
+                        //$(this).remove();
+                        //});
+                    }
+                });
+
+            e.preventDefault();
+        });
+    });
+
+</script>
 </body>
 </html>
