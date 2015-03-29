@@ -29,7 +29,7 @@
 		public function Create()
 		{
 			$db = Db::getInstance();
-			$stmt = $db->prepare("INSERT INTO imessages (text, user) VALUES (:message, :user)");
+			$stmt = $db->prepare("INSERT INTO imessages (message, user) VALUES (:message, :user)");
 			$stmt->bindValue(':message', $this->m_sText);
 			$stmt->bindValue(':user', $this->m_sUser);
 			$stmt->execute();
