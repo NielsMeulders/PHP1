@@ -79,7 +79,7 @@
                 var text = $(".imessage").val();
 
                 // 3 - AJAX call richting ajax/save_activity.php
-                $.ajax({
+                var request = $.ajax({
                     method: "POST",
                     url: "classes/save_message.php",
                     data: { 'text' : text }
@@ -90,15 +90,19 @@
                         if(resp.status === "success")
                         {
                             // 4 - indien success> slideDown()
-
-                            var li = $("<article class="me"></article>").html(resp.text).css("display","none");
-                            $(".messages").prepend(li);
+                            console.log("finish!!");
+                            var li = $("<article class='me'></article>").html(resp.text).css("display","none");
+                            $(".messages").append(li);
                             li.slideDown("fast");
                             //$(".messages").last().slideUp("fast", function(){
                             //$(this).remove();
                             //});
                         }
                     });
+
+                request.always(function() {
+                    console.log('Testing, this should always fire!');
+                });
 
                 e.preventDefault();
             });
