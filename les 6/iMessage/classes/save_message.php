@@ -1,6 +1,15 @@
 <?php
 
+session_start();
+if(isset( $_SESSION['name'] ))
+{
     $currentUser = $_SESSION['name'];
+}
+else
+{
+    // users needs to login first
+    header("location: login.php");
+}
 
 include_once("Message.class.php");
 $m = new Message();

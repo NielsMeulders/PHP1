@@ -85,14 +85,16 @@
                     data: { 'text' : text }
                 })
                     .done(function( resp ) {
-                        alert( "Data Saved: " + resp );
+                        //alert( "Data Saved: " + resp );
                         //console.log(resp);
                         if(resp.status === "success")
                         {
                             // 4 - indien success> slideDown()
-                            alert("complete ajax");
 
-                            //$("#listupdates li").last().slideUp("fast", function(){
+                            var li = $("<article class="me"></article>").html(resp.text).css("display","none");
+                            $(".messages").prepend(li);
+                            li.slideDown("fast");
+                            //$(".messages").last().slideUp("fast", function(){
                             //$(this).remove();
                             //});
                         }
