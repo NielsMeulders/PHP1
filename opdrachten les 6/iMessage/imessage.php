@@ -79,7 +79,7 @@
                 var text = $(".imessage").val();
 
                 // 3 - AJAX call richting ajax/save_activity.php
-                var request = $.ajax({
+                $.ajax({
                     method: "POST",
                     url: "classes/save_message.php",
                     data: { 'text' : text }
@@ -100,9 +100,15 @@
                         }
                     });
 
-                request.always(function() {
-                    console.log('Testing, this should always fire!');
-                });
+                setInterval(function(){
+
+                    $.get("classes/get_message.php", function(data, status){
+
+                        console.log(data.toString());
+
+                    });
+
+                }, 3000);
 
                 e.preventDefault();
             });
