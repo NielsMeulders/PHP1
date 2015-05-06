@@ -1,0 +1,46 @@
+body
+{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.blog--list a
+{
+	color: #999;
+}
+
+.blog--list a:active
+{
+	background-color: #fe4320;
+}
+
+.blog--title
+{
+	letter-spacing: -1px;
+}
+
+.blog--loading
+{
+	height: 20px;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	display: none;
+}
+
+.blog--article
+{
+	padding: 1em;
+}
+
+footer
+{
+	background-color: #fe4320;
+	text-align: center;
+	color: #FFF;
+	padding: 1em;
+}
+
+footer a
+{
+	color: #FFF;
+}
